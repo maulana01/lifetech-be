@@ -10,7 +10,7 @@ app.use(cors());
 
 const routes = require('./src/v1/routes');
 
-app.get('/', (req, res) => res.send('Hello World'));
+app.get('/', (req, res) => res.status(200).json({ status: 200, message: 'Lifetech API', version: '1.0' }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
